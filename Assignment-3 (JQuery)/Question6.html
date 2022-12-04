@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question6</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Saket</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button id="addrow">Add Row</button>
+    <button id="color">Change Color</button>
+    <br>
+    <h1 id="hey">This is sample text with id hey</h1>
+    <h1 id="no">This is sample text with id no</h1>
+    <h1 id="no">This is sample text with id no</h1>
+    <h1 id="hey">This is sample text with id hey</h1>
+    <br>
+    <input type="text" id="rem">
+    <button id="rembtn">Remove Elements</button>
+
+    <script>
+      $(document).ready(() => {
+        let count = 1;
+        $('#addrow').click(()=>{
+            addrow = "<tr><td>Sample Row "+count+"</td><td>Sample Row "+count+"</td></tr>";
+            $('tbody').append(addrow);
+            count++;
+        })
+
+        $('#color').click(()=>{
+            $('body').css('color', 'red');
+        })
+
+        $('#rembtn').click(()=>{
+            let v = '#'+$('#rem').val();
+            $(v).remove();  // id is considered to be a unique attribute hence to delete all at once is absurd
+        })
+      });
+    </script>
+  </body>
+</html>

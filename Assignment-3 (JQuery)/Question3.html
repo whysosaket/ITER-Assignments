@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <input id="field1" type="text" value="Field 1" />
+      <input id="field2" type="text" value="Field 2" />
+    </form>
+
+    <script>
+      $(document).ready(() => {
+        $("#field1").blur(function () {
+          alert("This field1 has lost its focus.");
+        });
+        $("#field2").blur(function () {
+          alert("This field2 has lost its focus.");
+        });
+      });
+    </script>
+  </body>
+</html>

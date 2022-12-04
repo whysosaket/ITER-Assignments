@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question5</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+    .anim{
+        position: fixed;
+        height: 20px;
+        width: 400px;
+    }
+  </style>
+  <body>
+    <div class="popup">
+      <h1>This is a sample Slidedown</h1>
+    </div>
+    <div class="anim">
+        <h1>This is a sample Animation</h1>
+      </div>
+    <p class="slidedown">Click to Slidedown</p>
+    <br>
+    <p class="animate">Click to Animate</p>
+    <p class="fadein">Click to Fade In</p>
+    <p class="hide">Click to Hide</p>
+    <p class="show">Click to Show</p>
+    <h1 class="mous">This is mouse enter</h1>
+    <p class="menter">Mouseenter</p>
+    <p class="dbl">Double Click</p>
+    <script>
+      $(document).ready(() => {
+        $('.popup').hide();
+        // $('.mous').hide();
+
+        $('.slidedown').click(()=>{
+          $('.popup').slideDown();
+        })
+
+        $('.animate').click(()=>{
+          $('.anim').animate({left: "300px"});
+        })
+
+        $('.fadein').click(()=>{
+          $('.popup').fadeIn(2000);
+        })
+
+        $('.hide').click(()=>{
+          $('.popup').hide();
+        })
+
+        $('.show').click(()=>{
+          $('.popup').show();
+        })
+
+        $('.menter').mouseenter(()=>{
+          $('.mous').hide();
+        })
+
+        $('.menter').mouseleave(()=>{
+          $('.mous').show();
+        })
+
+        $('.dbl').dblclick(()=>{
+          $('.popup').slideUp();
+        })
+
+        // alert($('.anim').attr('height'));
+        $('.anim').html("<h1>This is a changed value</h1>")
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question7</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+    form{
+      text-align: center;
+      margin: 5rem auto;
+    }
+    input{
+      height: 2rem;
+      display: block;
+      margin: 1rem auto;
+    }
+    .btn{
+      background-color: antiquewhite;
+      border: 0;
+    }
+    .btn:hover{
+      background-color: rgb(255, 216, 165);
+    }
+  </style>
+  <body>
+    <form id="login" action="/">
+      <input type="email" name="email" placeholder="Enter your email">
+      <input id="password" type="password" name="password" placeholder="Enter your password">
+      <input class="btn" type="submit" value="Submit">
+    </form>
+    <script>
+      $(document).ready(() => {
+        // var a = document.forms['#login']['password'].value;
+        $( "#login" ).submit(function( event ) {
+          if($('#login').find('input[name="password"]').val()==""){
+            alert("Password Cannot be empty");
+          }else alert('Form Submitted');
+          event.preventDefault();
+        });
+        
+      });
+    </script>
+  </body>
+</html>
