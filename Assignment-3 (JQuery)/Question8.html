@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question7</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+     table,
+    th,
+    td {
+      border: 1px solid;
+      padding: 0.5rem;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td>Job Name</td>
+          <td>Category</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>Janitor</td>
+        <td>Maintainance</td>
+      </tr>
+      <tr>
+        <td>Cleaning Staff</td>
+        <td>Maintainance</td>
+      </tr>
+      <tr>
+        <td>Train Driver</td>
+        <td>Driver</td>
+      </tr>
+      <tr>
+        <td>Gardener</td>
+        <td>Maintainance</td>
+      </tr>
+      <tr>
+        <td>Bus Driver</td>
+        <td>Driver</td>
+      </tr>
+      <tr>
+        <td>House Servant</td>
+        <td>Maintainance</td>
+      </tr>
+      <tr>
+        <td>Car Driver</td>
+        <td>Driver</td>
+      </tr>
+      <tr>
+        <td>Bike Driver</td>
+        <td>Driver</td>
+      </tr>
+      <tr>
+        <td>Akshat</td>
+        <td>Maintainance</td>
+      </tr>
+      <tr>
+        <td>Boat Driver</td>
+        <td>Driver</td>
+      </tr>
+
+    </table>
+
+    <input type="text" id="search" placeholder="Search for a job" />
+
+
+
+    <script>
+      $(document).ready(() => {
+        // filter based on the input
+        $("#search").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("table tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
