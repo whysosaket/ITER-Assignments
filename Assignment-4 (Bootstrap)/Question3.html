@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+  <div class="container p-5">
+    <h1 class="text-center">Upload File</h1>
+
+    <form class="form border">
+    <input id="fil" type="file" class="input-group p-3 border" id="myfile" name="myfile" />
+    <input id="sub" type="button" class="btn btn-dark m-3" value="Submit" />
+    </form>
+
+    <div class="progress mt-5">
+      <div class="progress-bar" id="pb" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    </div>
+        <script>
+          $(document).ready(()=>{
+            $('#sub').click(()=>{
+              if(!($('#fil').get(0).files.length === 0 ))
+              $('#pb').css('width', '100%');
+            })
+          })
+        </script>
+</body>
+</html>
