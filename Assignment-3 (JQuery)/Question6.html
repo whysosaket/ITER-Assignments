@@ -53,7 +53,9 @@
 
         $('#rembtn').click(()=>{
             let v = '#'+$('#rem').val();
-            $(v).remove();  // id is considered to be a unique attribute hence to delete all at once is absurd
+            while(typeof $(v).data()!='undefined'){
+              $(v).remove();  // id is considered to be a unique attribute hence to delete all at once is absurd
+            }
         })
       });
     </script>
