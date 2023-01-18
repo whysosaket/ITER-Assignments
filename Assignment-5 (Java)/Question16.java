@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Question16 {
@@ -20,8 +21,6 @@ public class Question16 {
         for (int i = arr.length - k; i < arr.length; i++) {
             arr[i] = temp[i - (arr.length - k)];
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println(Arrays.toString(arr));
     }
 }
