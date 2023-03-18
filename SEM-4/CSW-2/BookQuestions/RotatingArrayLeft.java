@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class RotatingArray{
+public class RotatingArrayLeft{
     public static void main(String[] args) {
         int [] a = {1,2,3,4,5,6,7,8,9,10};
         rotateArray(a, 8);
