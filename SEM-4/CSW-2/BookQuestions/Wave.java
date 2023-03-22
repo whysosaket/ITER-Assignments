@@ -7,10 +7,10 @@ public class Wave {
         System.out.println(Arrays.toString(a));
     }
 
-    public static void Wave(int arr[], int n){
-        for(int i = 0; i < n-1; i+=2){
-            if(i > 0 && arr[i - 1] > arr[i]) swap(arr, i, i-1);
-            if(i < n-1 && arr[i + 1] > arr[i]) swap(arr, i, i+1);
+    public static void Wave(int[] a){
+        for(int i = 0; i < a.length-1; i+=2){
+            if(i > 0 && a[i - 1] > a[i]) swap(a, i, i-1);
+            if(i < a.length-1 && a[i + 1] > a[i]) swap(a, i, i+1);
         }
     }
 
