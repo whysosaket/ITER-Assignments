@@ -1,7 +1,5 @@
-
-public class MaxCircularSum {
-
-	public static void main(String[] args) {
+public class Question11 {
+    public static void main(String[] args) {
 		int a[] = {8,3,1,2};
 		int ans = maxCircularSum(a);
 		System.out.println(ans);
@@ -21,5 +19,4 @@ public class MaxCircularSum {
 		}
 		return max;
 	}
-
 }

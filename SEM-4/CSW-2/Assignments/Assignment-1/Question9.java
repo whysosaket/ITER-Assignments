@@ -1,7 +1,6 @@
-
-public class SmallestPositiveMissing {
-
+public class Question9 {
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		int [] a = {1,2,9,7,3,4,};
 		int ans = smallestPositiveMissingNumber(a);
 		System.out.println(ans);
@@ -22,5 +21,4 @@ public class SmallestPositiveMissing {
 		}
 		return -1;
 	}
-
 }

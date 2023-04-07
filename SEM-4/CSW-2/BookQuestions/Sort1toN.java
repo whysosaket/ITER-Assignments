@@ -1,11 +1,8 @@
-package Test1;
-
 import java.util.Arrays;
 
 public class Sort1toN {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int [] a = {1,4,3,2};
 		sort1toN(a);
 		System.out.println(Arrays.toString(a));

@@ -1,7 +1,5 @@
-
-public class TowerOfHanoi {
-
-	public static void main(String[] args) {
+public class Question14 {
+    public static void main(String[] args) {
 		towerOfHanoi(4,'A', 'B','C');
 	}
 	
@@ -11,5 +9,4 @@ public class TowerOfHanoi {
 		System.out.printf("Move %d disk from peg %c, to peg %c\n", n,src,dst);
 		towerOfHanoi(n-1,aux,dst,src);
 	}
-
 }

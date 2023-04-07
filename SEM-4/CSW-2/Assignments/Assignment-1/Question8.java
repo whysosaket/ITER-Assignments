@@ -1,9 +1,8 @@
-
 import java.util.Arrays;
 
-public class IndexArray {
-
-	public static void main(String[] args) {
+public class Question8 {
+    public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		int [] a = {8,-1,6,1,9,3,2,7,4,-1};
 		indexArray(a);
 		System.out.println(Arrays.toString(a));
@@ -20,5 +19,4 @@ public class IndexArray {
 		}
 		return -1;
 	}
-
 }

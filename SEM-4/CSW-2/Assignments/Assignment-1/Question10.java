@@ -1,9 +1,8 @@
-
 import java.util.Arrays;
 
-public class MaxMinArray {
-
-	public static void main(String[] args) {
+public class Question10 {
+    public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		int [] a = {1,2,3,4,5,6,7};
 		maxMinArray(a);
 		System.out.println(Arrays.toString(a));
@@ -24,5 +23,4 @@ public class MaxMinArray {
 		}
 		
 	}
-	
 }

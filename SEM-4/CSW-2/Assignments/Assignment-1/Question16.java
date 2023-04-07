@@ -1,8 +1,6 @@
-
 import java.util.Arrays;
 
-public class IntegerListPermutation {
-
+public class Question16 {
 	public static void main(String[] args) {
 		int [] a = {1,2,3};
 		permutation(a,0);
@@ -26,5 +24,4 @@ public class IntegerListPermutation {
 		a[s] = a[d];
 		a[d] = temp;
 	}
-
 }

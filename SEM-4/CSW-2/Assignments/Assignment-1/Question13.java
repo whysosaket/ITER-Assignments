@@ -1,7 +1,6 @@
-
-public class MaxPathSum {
-
-	public static void main(String[] args) {
+public class Question13 {
+    public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		int [] a = {12,13,18,20,22,26,70};
 		int [] b = {11,15,18,19,20,26,30,31};
 		int ans = maxPathSum(a,b);
@@ -37,5 +36,4 @@ public class MaxPathSum {
 		r+=Math.max(s1,s2);
 		return r;
 	}
-
 }

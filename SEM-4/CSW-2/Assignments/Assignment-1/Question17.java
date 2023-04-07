@@ -1,8 +1,5 @@
-
-
-public class BinarySearchRecursive {
-
-	public static void main(String[] args) {
+public class Question17 {
+    public static void main(String[] args) {
 		int [] a = {1,2,3,4,5,6};
 		int index = binarySearch(a,0,a.length-1, 4);
 		System.out.println(index);
@@ -15,5 +12,4 @@ public class BinarySearchRecursive {
 		else if(a[mid]>v) return binarySearch(a,l,mid-1,v);
 		else return binarySearch(a,mid+1,h,v);
 	}
-
 }

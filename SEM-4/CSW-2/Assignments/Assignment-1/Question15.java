@@ -1,7 +1,5 @@
-
-public class GCD {
-
-	public static void main(String[] args) {
+public class Question15 {
+    public static void main(String[] args) {
 		int ans =  gcd(119,120);
 		System.out.println(ans);
 	}
@@ -11,5 +9,4 @@ public class GCD {
 		if(a%b==0) return b;
 		return gcd(b, a%b);
 	}
-
 }
