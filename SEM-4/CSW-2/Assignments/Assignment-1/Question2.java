@@ -7,11 +7,11 @@ public class Question2 {
         System.out.println(binaryString(n));
     }
 
-    private static String binaryString(int n){      // O(N log N) Ans.
+    private static String binaryString(int n){      // O(N) Ans.
         StringBuilder sb = new StringBuilder();
         Stack<Integer> stack = new Stack<>();
         while(n>0){                                 // O(n)
-            stack.push(n%2);                        // O(log N) 
+            stack.push(n%2);                        // O(1) 
             n/=2;
         }
         while(!stack.isEmpty()){
