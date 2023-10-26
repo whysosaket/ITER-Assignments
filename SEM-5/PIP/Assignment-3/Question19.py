@@ -11,6 +11,7 @@ def find_average():
                 exit()
             sum/=count
             print("Average:",sum)
+            break
         sum+=n
         count+=1
 

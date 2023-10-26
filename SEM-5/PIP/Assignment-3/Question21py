@@ -17,4 +17,4 @@ else:
     factors = prime_factors(n)
     print(f"The prime factors of {n} are:")
     for factor in factors:
-        print(factor)
+        print(factor, end="  ")
