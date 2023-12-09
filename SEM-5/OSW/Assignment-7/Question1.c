@@ -12,3 +12,8 @@ int main(){
     printf("%d\n", *(*(arr + 2) + 4));
     return 0;
 }
+
+/*
+24
+24
+*/
