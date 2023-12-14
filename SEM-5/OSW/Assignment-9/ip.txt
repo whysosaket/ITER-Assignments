@@ -1,0 +1,100 @@
+192.168.1.1 home
+10.0.0.2          office
+172.16.0.10       server
+203.0.113.45      firewall
+8.8.8.8           dns
+192.168.0.101     printer
+198.51.100.22     router
+10.10.20.30       laptop
+192.168.2.50      tablet
+172.31.0.1        gateway
+200.1.2.3         internet
+192.0.2.77        camera
+192.168.3.25      smarttv
+176.19.45.22      thermostat
+10.1.2.3          smartphone
+203.0.113.78      nas
+192.168.1.100     desktop
+172.16.0.5        voip
+198.51.100.67     storage
+192.0.2.1         printer
+192.168.0.201     fridge
+203.0.113.89      smartwatch
+172.16.0.15       speaker
+10.0.0.50         gamingpc
+192.168.2.75      thermostat
+198.51.100.123    smartlock
+192.168.1.10      media server
+10.1.2.4          tablet
+203.0.113.99      camera
+192.0.2.150       laptop
+192.168.3.10      doorbell
+172.16.0.25       garage door
+10.10.20.40       workstation
+203.0.113.111     speaker
+192.168.0.5       tablet
+198.51.100.150    desktop
+172.31.0.2        smarttv
+192.168.2.30      thermostat
+10.1.2.5          printer
+203.0.113.135     laptop
+192.0.2.200       gaming console
+192.168.1.50      security camera
+172.16.0.35       tablet
+198.51.100.200    router
+192.168.0.15      printer
+10.0.0.100        desktop
+203.0.113.150     smart speaker
+192.168.2.100     tablet
+172.16.0.45       thermostat
+10.1.2.6          camera
+192.0.2.250       laptop
+198.51.100.250    gamingpc
+192.168.1.200     printer
+172.31.0.3        smarttv
+203.0.113.175     tablet
+192.168.2.45      doorbell
+10.10.20.50       workstation
+203.0.113.189     thermostat
+192.0.2.15        laptop
+172.16.0.55       printer
+198.51.100.35     desktop
+192.168.1.75      tablet
+10.1.2.7          gaming console
+203.0.113.200     camera
+192.0.2.30        thermostat
+172.16.0.65       router
+10.0.0.150        smartwatch
+192.168.0.25      printer
+198.51.100.45     laptop
+203.0.113.220     desktop
+192.168.2.150     tablet
+172.31.0.4        security camera
+10.1.2.8          printer
+203.0.113.235     gamingpc
+192.0.2.100       smarttv
+192.168.1.250     tablet
+172.16.0.75       doorbell
+10.10.20.60       thermostat
+198.51.100.55     laptop
+192.168.2.200     gaming console
+203.0.113.250     printer
+192.0.2.50        camera
+172.31.0.5        thermostat
+10.1.2.9          router
+192.168.1.15      desktop
+198.51.100.67     tablet
+203.0.113.5       smarttv
+172.16.0.85       printer
+10.0.0.200        thermostat
+192.168.2.250     laptop
+192.0.2.5         printer
+203.0.113.15      gamingpc
+10.1.2.10         desktop
+172.31.0.6        tablet
+192.168.1.5       camera
+198.51.100.80     thermostat
+203.0.113.30      router
+10.10.20.70       printer
+192.0.2.75        gaming console
+192.168.2.5       smarttv
