@@ -11,8 +11,8 @@ int main()
         double or_time, ro_time;
     } planet_t;
 
-    planet_t p1;
-    planet_t *p2 = &p1;
+    planet_t p1, *p2;
+    p2 = &p1;
     strcpy(p2->name, "Jupiter");
     p2->diameter = 142.34;
     p2->moons = 16;

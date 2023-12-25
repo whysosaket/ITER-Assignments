@@ -1,9 +1,7 @@
 #include<stdio.h>
 
 void removeDuplicates(char *str){
-    if(str[0] == '\0'){
-        return;
-    }
+    if(str[0] == '\0') return;
     if(str[0] == str[1]){
         int i = 0;
         while(str[i] != '\0'){
