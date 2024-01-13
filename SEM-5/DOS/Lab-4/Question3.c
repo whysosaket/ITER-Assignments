@@ -24,7 +24,7 @@ int main(){
             sleep(1);
             id = fork();
             if(id==0){
-                execlp("tac", "tac", "file2", NULL);
+               execlp("/bin/sh", "sh", "-c", "cat file2 | sort -r", NULL);
                 printf("\n");
                 _exit(0);
             }

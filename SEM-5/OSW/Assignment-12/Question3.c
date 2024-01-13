@@ -1,40 +1,50 @@
-#include <stdio.h>
-#include <pthread.h>
-#include <semaphore.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<semaphore.h>
 
 int balance = 1000;
-sem_t *sem;
+sem_t sema;
 
-void *deposit_and_withdraw(void *arg) {
-    int *amounts = (int *)arg;
-    int deposit_amount = amounts[0];
-    int withdraw_amount = amounts[1];
-    sem_wait(sem);
-    balance += deposit_amount;
-    printf("Deposited %d\n", deposit_amount);
-    printf("Balance after deposit: %d\n", balance);
-
-    balance -= withdraw_amount;
-    printf("Withdrawn %d\n", withdraw_amount);
-    printf("Balance after withdrawal: %d\n", balance);
-    sem_post(sem);
+void *deposit(int arg){
+    int bal = balance;
+    sem_wait(sema);
+    sleep(3);
+    bal = bal + arg;
+    balance = bal;
+    sem_post(sema);
+    printf("Deposited %d\n", arg);
+    printf("Balance: %d\n", balance);
     return NULL;
 }
 
-int main() {
-    pthread_t tid;
-    int amounts[] = {100, 200};
-    sem = sem_open("/mysemaphore", O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 1);
-    if (sem == SEM_FAILED) {
-        perror("Semaphore creation failed");
-        return 1;
+void *withdraw(int arg){
+    sleep(1);
+    int bal = balance;
+    sem_wait(sema);
+    bal = bal - arg;
+    balance = bal;
+    sem_post(sema);
+    printf("Withdrawn %d\n", arg);
+    printf("Balance: %d\n", balance);
+    return NULL;
+}
+
+int main(int argc, char *argv[]){
+
+    pid_t pid;
+    int amount1 = 100, amount2 = 200;
+    sema = sem_open("/sema", O_CREAT, 0644, 1);
+
+    pid = fork();
+
+    if (pid==0){
+        withdraw(amount1);
+    }else{
+        deposit(amount2);
     }
-    pthread_create(&tid, NULL, deposit_and_withdraw, amounts);
-    pthread_join(tid, NULL);
-    sem_close(sem);
-    sem_unlink("/mysemaphore");
+
+    sem_close(sema);
+    sem_unlink("/sema");
+
     return 0;
 }

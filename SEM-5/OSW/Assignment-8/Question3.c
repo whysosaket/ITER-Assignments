@@ -16,7 +16,7 @@ void prtFun(void)
     register int a = 2; /* Line 2 */
     int b = 1;
     a += ++b;
-    printf("\n %d %d %d ", a, b, c);
+    printf("\n %d %d", a, b);
 }
 
 /*

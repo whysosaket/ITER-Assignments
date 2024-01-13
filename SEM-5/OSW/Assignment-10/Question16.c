@@ -9,6 +9,7 @@ void stringconcate(char *s, char *t){
         p++;
         t++;
     }
+    *(p+n) = '\0';
 }
 
 int main(){

@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
+void f(int a[], int n, float y);
+void fc(int *a, int n, float y);
+
 int main(){
-   char str[]="SOA D U - 2022";
-deblank(str);
-printf("%s\n",str);
+   
     return 0;
 }

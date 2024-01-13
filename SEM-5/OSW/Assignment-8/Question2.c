@@ -16,11 +16,11 @@ void prtFun(void)
     static int a = 2; /* Line 2 */
     int b = 1;
     a += ++b;
-    printf("\n %d %d %d ", a, b, c);
+    printf("\n %d %d ", a, b);
 }
 
 /*
-4 2 0 
-6 2 0 
+4 2 
+6 2
 2 0 
 */

@@ -1,34 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
-#include <semaphore.h>
-#include <fcntl.h>
-#include <sys/stat.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<semaphore.h>
 
 int main(){
-    sem_t *sem;
-    sem = sem_open("/mysemaphore", O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 0);
-    if (sem == SEM_FAILED) {
-        perror("Semaphore creation failed");
-        return 1;
-    }
+    sem_t *sync;
     pid_t pid;
-    pid = fork();
-    int status;
-
+    sync = sem_open("/mysem", O_CREAT, 0644, 0);
+    pid=fork();
     if(pid==0){
-        sem_wait(sem);
-        printf("Child: Executing statement b\n");
-        sem_post(sem);
-        exit(0);
+        sleep(5);
+        printf("a\n");
+        sem_post(sync);
     }else{
-        printf("Parent: Executing statement a\n");
-        sem_post(sem);
-        pid_t cpid = waitpid(pid, &status, 0);
-        printf("Parent: Child %d terminated\n", cpid);
+        sem_wait(sync);
+        printf("b\n");
     }
-    sem_close(sem);
-    sem_unlink("/mysemaphore");
-    return 0;
+    sem_close(sync);
+    sem_unlink("/mysem");
 }

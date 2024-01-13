@@ -2,6 +2,7 @@
 
 void printBinary(int n){
     if(n == 0){
+        printf("0");
         return;
     }
     printBinary(n/2);

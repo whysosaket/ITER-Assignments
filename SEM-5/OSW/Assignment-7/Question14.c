@@ -17,5 +17,6 @@ int *fun(){
 }
 
 /*
-30
+~30~
+(A) Unexpected output
 */
