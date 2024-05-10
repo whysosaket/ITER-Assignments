@@ -1,43 +1,43 @@
+USE university;
 
--- Answer 1
+-- Question 1
 
 CREATE TABLE Instructor(
-ID Number(5),
-Name Varchar2(30),
-Dept_name Varchar2(20),
-Salary Number(6)
+ID INT(5),
+Name VARCHAR(30),
+Dept_name VARCHAR(20),
+Salary INT(6)
 );
 
 CREATE TABLE Course(
-Course_id Varchar2(10),
-Title Varchar2(30),
-Dept_name Varchar2(20),
-Credits Number(2)
+Course_id VARCHAR(10),
+Title VARCHAR(30),
+Dept_name VARCHAR(20),
+Credits INT(2)
 );
 
 CREATE TABLE Prereq(
-Course_id Varchar2(10),
-Prereq_id Varchar2(10)
+Course_id VARCHAR(10),
+Prereq_id VARCHAR(10)
 );
 
 CREATE TABLE Department(
-Dept_name Varchar2(20),
-Building Varchar2(20),
-Budget Number(10)
+Dept_name VARCHAR(20),
+Building VARCHAR(20),
+Budget INT(10)
 );
 
 CREATE TABLE Teaches(
-ID Number(5),
-Course_id Varchar2(10),
-Sec_id Number(2),
-Semester Varchar2(10),
-year Number(4)
+ID INT(5),
+Course_id VARCHAR(10),
+Sec_id INT(2),
+Semester VARCHAR(10),
+year INT(4)
 );
 
+-- Question 2
 
--- Answer 2
-
-INSERT INTO instructor (ID, name, dept_name, salary)
+INSERT INTO Instructor (ID, Name, Dept_name, Salary)
 VALUES (10101, 'Srinivasan', 'Comp. Sci.', 65000),
 (12121, 'Wu', 'Finance', 90000),
 (15151, 'Mozart', 'Music', 40000),
@@ -49,12 +49,11 @@ VALUES (10101, 'Srinivasan', 'Comp. Sci.', 65000),
 (76543, 'Singh', 'Finance', 80000),
 (76766, 'Crick', 'Biology', 72000),
 (83821, 'Brandt', 'Comp. Sci.', 92000),
-(98345, 'Kim', 'Elec. Eng.', 80000)
-;
+(98345, 'Kim', 'Elec. Eng.', 80000);
 
--- Answer 3
+-- Question 3
 
-INSERT INTO course (course_id, title, dept_name, credits)
+INSERT INTO Course (Course_id, Title, Dept_name, Credits)
 VALUES 
 ('BIO-101', 'Intro. to Biology', 'Biology', 4),
 ('BIO-301', 'Genetics', 'Biology', 4),
@@ -67,13 +66,11 @@ VALUES
 ('FIN-201', 'Investment Banking', 'Finance', 3),
 ('HIS-351', 'World History', 'History', 3),
 ('MU-199', 'Music Video Production', 'Music', 3),
-('PHY-101', 'Physical Principles', 'Physics', 4)
-;
+('PHY-101', 'Physical Principles', 'Physics', 4);
 
+-- Question 4
 
--- Answer 4
-
-INSERT INTO prereq (course_id, prereq_id)
+INSERT INTO Prereq (Course_id, Prereq_id)
 VALUES 
 ('BIO-301', 'BIO-101'),
 ('BIO-399', 'BIO-101'),
@@ -81,13 +78,11 @@ VALUES
 ('CS-315', 'CS-101'),
 ('CS-319', 'CS-101'),
 ('CS-347', 'CS-101'),
-('EE-181', 'PHY-101')
-;
+('EE-181', 'PHY-101');
 
+-- Question 5
 
--- Answer 5
-
-INSERT INTO department (dept_name, building, budget)
+INSERT INTO Department (Dept_name, Building, Budget)
 VALUES
 ('Biology', 'Watson', 90000),
 ('Comp. Sci.', 'Taylor', 100000),
@@ -95,13 +90,11 @@ VALUES
 ('Finance', 'Painter', 120000),
 ('History', 'Painter', 50000),
 ('Music', 'Packard', 80000),
-('Physics', 'Watson', 70000)
-;
+('Physics', 'Watson', 70000);
 
+-- Question 6
 
--- Answer 6
-
-INSERT INTO Teaches (ID, course_id, sec_id, semester, year)
+INSERT INTO Teaches (ID, Course_id, Sec_id, Semester, year)
 VALUES
 (10101, 'CS-101', 1, 'Fall', 2009),
 (10101, 'CS-315', 1, 'Spring', 2010),
@@ -117,6 +110,4 @@ VALUES
 (83821, 'CS-190', 1, 'Spring', 2009),
 (83821, 'CS-190', 2, 'Spring', 2009),
 (83821, 'CS-319', 2, 'Spring', 2010),
-(98345, 'EE-181', 1, 'Spring', 2009)
-;
-
+(98345, 'EE-181', 1, 'Spring', 2009);
