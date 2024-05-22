@@ -6,7 +6,6 @@ CREATE TABLE customer (
     city VARCHAR2(255)
 );
 
-
 CREATE TABLE account (
     acc_no VARCHAR2(5) PRIMARY KEY,
     balance NUMBER(10, 2),

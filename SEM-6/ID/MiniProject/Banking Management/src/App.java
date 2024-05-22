@@ -8,12 +8,12 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            // Class.forName("oracle.jdbc.driver.OracleDriver");
-            // String conurl = "jdbc:oracle:thin:@172.17.144.110:1521:ora11g";
-            // con = DriverManager.getConnection(conurl, "<user ID>", "<user password>");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String conurl = "jdbc:mysql://127.0.0.1:3306/bankingdb";
-            con = DriverManager.getConnection(conurl, "root", "saket2002");
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            String conurl = "jdbc:oracle:thin:@localhost:1521:orclcdb";
+            con = DriverManager.getConnection(conurl, "sys as sysdba", "mypassword1");
+            // Class.forName("com.mysql.cj.jdbc.Driver");
+            // String conurl = "jdbc:mysql://127.0.0.1:3306/bankingdb";
+            // con = DriverManager.getConnection(conurl, "root", "saket2002");
             stmt = con.createStatement();
 
             int choice_variable;

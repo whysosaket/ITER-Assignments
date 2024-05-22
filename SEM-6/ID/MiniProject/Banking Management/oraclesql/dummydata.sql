@@ -1,10 +1,31 @@
-INSERT INTO customer (cust_no, name, phone_no, city) VALUES (1, 'Ramesh Kumar', '123-456-7890', 'Mumbai');
-INSERT INTO customer (cust_no, name, phone_no, city) VALUES (2, 'Sunita Gupta', '987-654-3210', 'Delhi');
-INSERT INTO customer (cust_no, name, phone_no, city) VALUES (3, 'Prakash Singh', '555-123-4567', 'Bangalore');
+-- Add dummy data to customer table
+INSERT INTO customer (cust_no, name, phone_no, city)
+VALUES ('C0003', 'Rajesh Kumar', '1234567890', 'MUM');
 
-INSERT INTO account (acc_no, balance, type, cust_no) VALUES (101, 5000.00, 'Savings', 1);
-INSERT INTO account (acc_no, balance, type, cust_no) VALUES (102, 10000.00, 'Checking', 2);
-INSERT INTO account (acc_no, balance, type, cust_no) VALUES (103, 7500.00, 'Savings', 3);
+INSERT INTO customer (cust_no, name, phone_no, city)
+VALUES ('C0005', 'Priya Singh', '9876543210', 'DEL');
 
-INSERT INTO loan (loan_no, amount, type, cust_no) VALUES (201, 15000.00, 'Home Loan', 1);
-INSERT INTO loan (loan_no, amount, type, cust_no) VALUES (202, 10000.00, 'Auto Loan', 2);
+INSERT INTO customer (cust_no, name, phone_no, city)
+VALUES ('C0008', 'Amit Sharma', '5555555555', 'BLR');
+
+INSERT INTO customer (cust_no, name, phone_no, city)
+VALUES ('C0016', 'Neha Gupta', '7767676767', 'KOL');
+
+
+-- Add dummy data to account table
+INSERT INTO account (acc_no, balance, type, cust_no)
+VALUES ('A0005', 15000.00, 'Savings', 'C0003');
+
+INSERT INTO account (acc_no, balance, type, cust_no)
+VALUES ('A0008', 10000.00, 'Checking', 'C0008');
+
+
+-- Add dummy data to loan table
+INSERT INTO loan (loan_no, amount, type, cust_no)
+VALUES ('L0001', 15000.00, 'Home Loan', 'C0003');
+
+INSERT INTO loan (loan_no, amount, type, cust_no)
+VALUES ('L0002', 10000.00, 'Auto Loan', 'C0005');
+
+INSERT INTO loan (loan_no, amount, type, cust_no)
+VALUES ('L0003', 8000.00, 'Personal Loan', 'C0008');
